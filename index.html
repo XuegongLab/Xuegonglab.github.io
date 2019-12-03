@@ -24,18 +24,13 @@ XMLHttpR = new ActiveXObject("Microsoft.XMLHTTP");
 function sendRequest(url){
 createXMLHttpRequest();
 XMLHttpR.open("GET",url,true);
-XMLHttpR.setRequestHeader("Content-Type","text/html;charset=gb2312");
+XMLHttpR.setRequestHeader("Content-Type","text/html;charset=utf-8");
 XMLHttpR.onreadystatechange = processResponse;
 XMLHttpR.send(null);
 }
 
 function processResponse(){
-if(XMLHttpR.readyState ==4 && XMLHttpR.status == 200){
-
 document.write(XMLHttpR.responseText);
-}else{
-document.write("ERROR");
-}
 }
 
 sendRequest("http://web.humancell.wiki/");
