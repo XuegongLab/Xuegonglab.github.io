@@ -14,21 +14,12 @@
  </head>
 <body>
 <iframe   src="./fresh.html" scrolling="auto" frameborder="0" width="100%"> </iframe>
-    <script language="JavaScript">
     <script type="text/javascript"  id="myiframe"  src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script>
-    $(document).ready(function(){
-  
-        var height = $(window).height();
-        $('#myiframe').height(height);
-    })
-    function changeFrameHeight(){
-        var ifm= document.getElementById("myiframe");
-        $('#myiframe').height($(window).height());
-    }
-    window.onresize=function(){
-        changeFrameHeight();
-    }
+    $("#myiframe").load(function(){
+      var mainheight = $(this).contents().find("body").height()+30;
+      $(this).height(mainheight);
+    });
     </script>
  
 </body>
