@@ -16,18 +16,10 @@
 <iframe   src="./fresh.html" id="myiframe"  scrolling="auto" frameborder="0" width="100%"> </iframe>
 <script type="text/javascript"   src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script>
-    $(document).ready(function(){
-        //高度设置
-        var height = $(window).height();
-        $('#myiframe').height(height);
-    })
-    function changeFrameHeight(){
-        var ifm= document.getElementById("myiframe");
-        $('#myiframe').height($(window).height());
-    }
-    window.onresize=function(){
-        changeFrameHeight();
-    }
+ $("#myiframe").load(function () {
+    var mainheight = $(this).contents().find("body").height() + 30;
+    $(this).height(mainheight);
+});
     </script>
 </body>
 </html>
