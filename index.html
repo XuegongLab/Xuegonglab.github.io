@@ -5,35 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HCA-CHINA</title>
-<script language=javascript>
-function createXMLHttpRequest(){
-if(window.XMLHttpRequest){
-XMLHttpR = new XMLHttpRequest();
-}else if(window.ActiveXObject){
-try{
-XMLHttpR = new ActiveXObject("Msxml2.XMLHTTP");
-}catch(e){
-try{
-XMLHttpR = new ActiveXObject("Microsoft.XMLHTTP");
-}catch(e){
-}
-}
-}
-}
-
-function sendRequest(url){
-createXMLHttpRequest();
-XMLHttpR.open("GET",url,true);
-XMLHttpR.setRequestHeader("Content-Type","text/html;charset=utf-8");
-XMLHttpR.onreadystatechange = processResponse;
-XMLHttpR.send(null);
-}
-
-function processResponse(){
-document.write(XMLHttpR.responseText);
-}
-
-sendRequest("http://web.humancell.wiki/");
-
-</script>
+<body>
+    <frameset frameborder="no" border="0" framespacing="0">
+    <frame src="http://web.humancell.wiki/" name="mainFrame" id="mainFrame" title="mainFrame" />
+   </frameset> 
+</body>
 </html>
