@@ -6,12 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HCA-CHINA</title>
 <body>
-<iframe   src="./fresh.html">
+<iframe   src="./fresh.html" scrolling="auto" frameborder="0" width="100%">
     <script language="JavaScript">
     if (window != top) {
         top.location.href = location.href;
     }
 </script>
+    <script type="text/javascript"  id="myiframe"  src="js/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+  
+        var height = $(window).height();
+        $('#myiframe').height(height);
+    })
+    function changeFrameHeight(){
+        var ifm= document.getElementById("myiframe");
+        $('#myiframe').height($(window).height());
+    }
+    window.onresize=function(){
+        changeFrameHeight();
+    }
+    </script>
   </iframe>
 </body>
 </html>
