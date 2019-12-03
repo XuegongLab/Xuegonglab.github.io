@@ -38,6 +38,8 @@ function processResponse(){
 if(XMLHttpR.readyState ==4 && XMLHttpR.status == 200){
 
 document.write(XMLHttpR.responseText);
+}else{
+document.write("ERROR");
 }
 }
 
